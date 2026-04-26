@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KneeCare | Knee Osteoarthritis Prediction & Monitoring</title>
+    <meta name="description"
+        content="Multi-modal deep learning platform for Knee Osteoarthritis detection, grading, and continuous monitoring using IoT sensors.">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=1.3">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.3">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png?v=1.3" alt="KneeCare Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#domain">Domain</a></li>
+                <li><a href="#milestones">Milestones</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#presentations">Presentations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">Multi-Modal Deep Learning</span>
+                    <h1>Knee Osteoarthritis Prediction and Progression</h1>
+                    <p>A unified decision-support system integrating medical imaging, clinical biomarkers, and wearable
+                        IoT sensors for early detection and long-term monitoring of Knee Osteoarthritis.</p>
+                    <div class="hero-btns">
+                        <a href="#domain" class="btn btn-primary">Research Overview</a>
+                        <a href="#milestones" class="btn btn-secondary">Project Progress</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/neecare_hero.png?v=1.3" alt="KneeCare Technology">
+                    <div class="glass-card floating-1">
+                        <i class="fas fa-wave-square"></i>
+                        <span>Vibration Analysis</span>
+                    </div>
+                    <div class="glass-card floating-2">
+                        <i class="fas fa-microscope"></i>
+                        <span>AI-Driven Grading</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domain Section -->
+        <section id="domain" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Research Domain</h2>
+                    <p>Bridging clinical assessment, medical imaging, and continuous patient monitoring through advanced
+                        AI.</p>
+                </div>
+                <div class="domain-grid">
+                    <div class="domain-card">
+                        <i class="fas fa-book-medical"></i>
+                        <h3>Literature Survey</h3>
+                        <p>Analysis of AI in KOA diagnosis using clinical databases, blood biomarkers, and CNN-based
+                            radiographic assessment (Kellgren-Lawrence grading).</p>
+                    </div>
+                    <div class="domain-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Research Gap</h3>
+                        <p>Conventional methods rely on single-modality info and lack continuous monitoring, making
+                            real-life progression tracking difficult.</p>
+                    </div>
+                    <div class="domain-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Research Problem</h3>
+                        <p>High cost of MRI/X-ray and impracticality of frequent hospital visits for elderly patients
+                            requiring long-term monitoring.</p>
+                    </div>
+                    <div class="domain-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Research Objectives</h3>
+                        <p>Developing low-cost, explainable monitoring systems using IoT sensors and multimodal data
+                            fusion for clinical decision support.</p>
+                    </div>
+                    <div class="domain-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Methodology</h3>
+                        <p>Phased approach: Clinical prediction (XGBoost), Binary Classification (YOLOv8), Severity
+                            Grading (EfficientNetB0), and IoT Wearable Monitoring.</p>
+                    </div>
+                    <div class="domain-card">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Technologies Used</h3>
+                        <p>Python, TensorFlow, YOLOv8, XGBoost, ESP32, MPU6050 (Vibration), and MLX90614 (Thermal)
+                            sensors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <section id="milestones" class="section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Project Milestones</h2>
+                    <p>Following our journey from the initial proposal to the final assessment. Each milestone
+                        represents a key phase in our research, design, and development process.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-date"><span>February 2025</span></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="m-badge">Milestone 1</span>
+                            <h3>Project Proposal</h3>
+                            <p>Initial project proposal presentation outlining the research problem, objectives,
+                                and feasibility analysis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-date"><span>07 Jan 2026</span></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="m-badge">Milestone 2</span>
+                            <h3>Progress Presentation 1</h3>
+                            <p>First progress review covering literature survey completion, system design, and initial
+                                prototype development.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-date"><span>11 Jan 2026</span></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="m-badge">Milestone 3</span>
+                            <h3>Progress Presentation 2</h3>
+                            <p>Second progress review demonstrating ML model training results, system integration,
+                                and testing outcomes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-date"><span>January 2026</span></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="m-badge">Milestone 4</span>
+                            <h3>Final Assessment</h3>
+                            <p>Final project assessment with complete system demonstration, evaluation metrics,
+                                and documentation review.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-date"><span>April 2026</span></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="m-badge">Milestone 5</span>
+                            <h3>Viva & Demonstration</h3>
+                            <p>Final viva voce examination presenting research contributions, findings, and future
+                                recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Section -->
+        <section id="documents" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Documents</h2>
+                    <p>Access all project-related documentation and reports.</p>
+                </div>
+
+                <!-- Project Charter -->
+                <div class="download-group">
+                    <h3>Project Charter</h3>
+                    <div class="download-card wide">
+                        <div class="d-info">
+                            <i class="fas fa-file-pdf pdf-icon"></i>
+                            <div>
+                                <h4>TAF_25-26J-112.pdf</h4>
+                                <p>PDF Document</p>
+                            </div>
+                        </div>
+                        <a href="assets/docs/TAF_25-26J-112.pdf" class="d-icon"><i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proposal Documents -->
+                <div class="download-group">
+                    <h3>Proposal Documents</h3>
+                    <div class="download-grid">
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-pdf pdf-icon"></i>
+                                <div>
+                                    <h4>IT22223708_Proposal_Report.pdf</h4>
+                                    <p>PDF Document</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/IT22223708_25-26J-112_Proposal_Report.pdf" class="d-icon"><i
+                                    class="fas fa-download"></i></a>
+                        </div>
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-pdf pdf-icon"></i>
+                                <div>
+                                    <h4>IT22188472_Proposal_Report.pdf</h4>
+                                    <p>PDF Document</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/IT22188472_25-26J-112_Proposal_Report.pdf" class="d-icon"><i
+                                    class="fas fa-download"></i></a>
+                        </div>
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-pdf pdf-icon"></i>
+                                <div>
+                                    <h4>IT22582942_Proposal_Report.pdf</h4>
+                                    <p>PDF Document</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/IT22582942_25-26J-112_Proposal Report.pdf" class="d-icon"><i
+                                    class="fas fa-download"></i></a>
+                        </div>
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-pdf pdf-icon"></i>
+                                <div>
+                                    <h4>IT22606792_Proposal_Report.pdf</h4>
+                                    <p>PDF Document</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/IT22606792_25-26J-112_ProposalReport.pdf" class="d-icon"><i
+                                    class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Check List Documents -->
+                <div class="download-group">
+                    <h3>Check List Documents</h3>
+                    <div class="download-grid">
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-excel excel-icon"></i>
+                                <div>
+                                    <h4>Master Sheet - Studied Papers.xlsx</h4>
+                                    <p>Excel Document</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/Master Sheet Of Research Papers Studied - 25-26-112.xlsx"
+                                class="d-icon"><i class="fas fa-download"></i></a>
+                        </div>
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-pdf pdf-icon"></i>
+                                <div>
+                                    <h4>Data Analysis Report.pdf</h4>
+                                    <p>PDF Document</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/Data Analysis Report - 25-26-112.pdf" class="d-icon"><i
+                                    class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Documents -->
+                <div class="download-group">
+                    <h3>Final Documents</h3>
+                    <div class="empty-state">
+                        <p>No documents available yet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentations Section -->
+        <section id="presentations" class="section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Presentations</h2>
+                    <p>View and download our presentation slides from each milestone.</p>
+                </div>
+                <div class="download-group">
+                    <div class="download-grid">
+                        <div class="download-card">
+                            <div class="d-info">
+                                <i class="fas fa-file-powerpoint ppt-icon"></i>
+                                <div>
+                                    <h4>PP1.pptx</h4>
+                                    <p>PowerPoint Presentation</p>
+                                </div>
+                            </div>
+                            <a href="assets/docs/PP1.pptx" class="d-icon"><i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Research Team</h2>
+                    <p>The innovators behind the KneeCare platform.</p>
+                </div>
+                <div class="team-grid supervisor-grid">
+                    <div class="team-card supervisor-card">
+                        <div class="member-img">
+                            <img src="assets/images/jenny.jpeg" alt="Supervisor">
+                        </div>
+                        <div class="member-info">
+                            <h3>Jenny Krishara</h3>
+                            <p class="role">Supervisor</p>
+                            <p class="affiliation">Lecturer<br>Department of Information Technology<br>Faculty of
+                                Computing, SLIIT</p>
+                        </div>
+                    </div>
+                    <div class="team-card supervisor-card">
+                        <div class="member-img">
+                            <img src="assets/images/thamali.jpg" alt="Co-supervisor">
+                        </div>
+                        <div class="member-info">
+                            <h3>Thamali Dassanayake</h3>
+                            <p class="role">Co-supervisor</p>
+                            <p class="affiliation">Lecturer<br>Department of Information Technology<br>Faculty of
+                                Computing, SLIIT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="member-img">
+                            <img src="assets/images/fernando​.jpg" alt="Fernando W.D.A">
+                        </div>
+                        <div class="member-info">
+                            <h3>Fernando W.D.A</h3>
+                            <p class="role">Full stack developer</p>
+                            <p>IT22223708</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="member-img">
+                            <img src="assets/images/jayasinghe​.jpg" alt="Jayasinghe J.M.N.S.">
+                        </div>
+                        <div class="member-info">
+                            <h3>Jayasinghe J.M.N.S.</h3>
+                            <p class="role">Data Analyst</p>
+                            <p>IT22582942​</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="member-img">
+                            <img src="assets/images/Perera​.jpg" alt="Perera B.B.A.R">
+                        </div>
+                        <div class="member-info">
+                            <h3>Perera B.B.A.R</h3>
+                            <p class="role">ML Engineer</p>
+                            <p>IT22606792​</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="member-img">
+                            <img src="assets/images/gamage.jpg" alt="Gamage D.M.G.P.K">
+                        </div>
+                        <div class="member-info">
+                            <h3>Gamage D.M.G.P.K</h3>
+                            <p class="role">IoT Developer</p>
+                            <p>IT22188472​</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="section alt-bg">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Contact Us</h2>
+                        <p>For research collaborations or inquiries regarding the KneeCare system.</p>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+94 11 234 5678</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@kneecare.edu</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-location-dot"></i>
+                                <span>Colombo, Sri Lanka.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="email-template">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="How can we help?" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 KneeCare Research Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=1.3"></script>
+</body>
+
+</html>
