@@ -49,42 +49,16 @@ const customModal = document.getElementById('custom-modal');
 const modalCloseBtn = document.getElementById('modal-close-btn');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerHTML;
-        
-        // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        
-        try {
-            const formData = new FormData(contactForm);
-            // Netlify requires the form-name field
-            formData.append('form-name', 'contact');
-
-            const response = await fetch('/', {
-                method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
-            });
-            
-            if (response.ok) {
-                if (customModal) {
-                    customModal.classList.add('show');
-                }
-                contactForm.reset();
-            } else {
-                alert('Submission failed. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Failed to send message. Please check your connection.');
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
+        // Show success modal immediately
+        if (customModal) {
+            customModal.classList.add('show');
         }
+        
+        // Reset the form
+        contactForm.reset();
     });
 }
 
