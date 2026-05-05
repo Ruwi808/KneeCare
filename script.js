@@ -49,33 +49,40 @@ const customModal = document.getElementById('custom-modal');
 const modalCloseBtn = document.getElementById('modal-close-btn');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
+        
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
-
+        
+        // Show loading state
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-        try {
-            const formData = new FormData(contactForm);
-
-            await fetch("/", {
-                method: "POST",
-                body: formData
-            });
-
+        
+        // Send email via Formsubmit.co
+        const formData = new FormData(contactForm);
+        fetch('https://formsubmit.co/ajax/dsfernando112@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
             // Show success modal
-            customModal.classList.add('show');
-
+            if (customModal) {
+                customModal.classList.add('show');
+            }
+            
+            // Reset the form and button
             contactForm.reset();
-        } catch (error) {
-            alert("Failed to send message. Try again.");
-        }
-
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+            alert("There was an error sending your message. Please try again.");
+        });
     });
 }
 
