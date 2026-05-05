@@ -49,28 +49,33 @@ const customModal = document.getElementById('custom-modal');
 const modalCloseBtn = document.getElementById('modal-close-btn');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
-        
-        // Show loading state
+
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        
-        // Simulate a small delay for a better feel
-        setTimeout(() => {
+
+        try {
+            const formData = new FormData(contactForm);
+
+            await fetch("/", {
+                method: "POST",
+                body: formData
+            });
+
             // Show success modal
-            if (customModal) {
-                customModal.classList.add('show');
-            }
-            
-            // Reset the form and button
+            customModal.classList.add('show');
+
             contactForm.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-        }, 1500); // 1.5 seconds delay
+        } catch (error) {
+            alert("Failed to send message. Try again.");
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
     });
 }
 
