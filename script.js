@@ -52,13 +52,25 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Show success modal immediately
-        if (customModal) {
-            customModal.classList.add('show');
-        }
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
         
-        // Reset the form
-        contactForm.reset();
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
+        // Simulate a small delay for a better feel
+        setTimeout(() => {
+            // Show success modal
+            if (customModal) {
+                customModal.classList.add('show');
+            }
+            
+            // Reset the form and button
+            contactForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }, 1500); // 1.5 seconds delay
     });
 }
 
