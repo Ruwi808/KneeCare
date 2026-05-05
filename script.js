@@ -45,11 +45,33 @@ window.addEventListener('scroll', () => {
 
 // Contact form submission
 const contactForm = document.getElementById('email-template');
+const customModal = document.getElementById('custom-modal');
+const modalCloseBtn = document.getElementById('modal-close-btn');
+
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Your research inquiry has been sent to the KneeCare team. Thank you!');
+        if (customModal) {
+            customModal.classList.add('show');
+        } else {
+            alert('Your research inquiry has been sent to the KneeCare team. Thank you!');
+        }
         contactForm.reset();
+    });
+}
+
+if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', () => {
+        customModal.classList.remove('show');
+    });
+}
+
+// Close modal when clicking outside
+if (customModal) {
+    customModal.addEventListener('click', (e) => {
+        if (e.target === customModal) {
+            customModal.classList.remove('show');
+        }
     });
 }
 
